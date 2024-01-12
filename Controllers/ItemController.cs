@@ -38,6 +38,12 @@ namespace RankingApp.Controllers
             ItemModel[] items = Items.Where(i => i.ItemType == itemType).ToArray();
             return items;
         }
+
+        [HttpGet]
+        public ItemModel[] Get()
+        {
+            return (ItemModel[])Items;
+        }
 	}
 }
 
